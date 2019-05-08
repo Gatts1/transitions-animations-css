@@ -1,0 +1,36 @@
+html, body{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: gray;
+  width: 300px;
+  height:120px;
+}
+
+.button {
+  transition-property: all;
+}
+
+.skyblue {
+  display: flex;
+  align-items: flex-end;
+  background-color: skyblue;
+  margin: auto;
+  width: 0;
+  height:20px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.4s;
+}
+
+.button:hover .skyblue {
+  width: 300px;
+}
+
+p {
+  font-size: 30px;
+}
+
