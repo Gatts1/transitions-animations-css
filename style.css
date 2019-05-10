@@ -49,13 +49,31 @@ p {
   background-color: skyblue;
   width: 0;
   height: 100%;
-  transition-timing-function: ease-out;
-  transition-duration: 0.4s;
+  animation-name: bounce-right-end;
+  /* transition-timing-function: ease-out;
+  transition-duration: 0.4s; */
 }
 
 .bounce:hover .bounce-right {
+  animation-name: bounce-right;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
   color: white;
-  width: 300px;
+}
+
+@keyframes bounce-right {
+  0% {
+  width: 0px;
+  }
+  50% {
+  width: 100%;
+  }
+  90%{
+    width: 92%;
+  }
+  100% {
+  width: 100%;
+  }
 }
 
 .text-box, .bounce-text {
@@ -111,3 +129,39 @@ p {
   }
 }
 
+/* ==================== */
+/* Bounce In */
+
+.bounce-in {
+  background-color: gray;
+  width: 300px;
+  height:120px;
+  transition-property: all;
+  animation-name: t-bounce-in;
+  animation-duration: 0.8s;
+  text-align: center;
+}
+
+.bounce-in:hover {
+  animation-name: bounce-in;
+  animation-duration: 0.8s;
+  transform: scale(1.25);
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(1.25);
+  }
+  /* 25% {
+    transform: scale(1.10);
+  } */
+  50% { 
+    transform: scale(1.10);
+  }
+  75% {
+    transform: scale(1.20);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
